@@ -4,7 +4,6 @@
 package com.o2.pizza.form;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -19,10 +18,10 @@ public class Order {
 	private String name;
 
 	@NotBlank(message = "*")
-	@Size(min = 1, max = 150)
+	@Size(max = 150, message = "Please enter address within 150 characters")
 	private String address;
 
-	@NotNull(message="*")
+	@NotNull(message = "*")
 	private Integer noOfPizzas;
 
 	/**

@@ -29,5 +29,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/validation-api-1.0.0.GA.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/velocity-dep-1.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/velocity-tools-view-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mockito-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mockito-core-1.9.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
