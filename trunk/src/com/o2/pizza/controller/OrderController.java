@@ -19,15 +19,12 @@ import com.o2.pizza.form.Order;
 public class OrderController {
  
     @RequestMapping(value = "/saveOrder", method = RequestMethod.POST)
-    public ModelAndView saveOrder(Model orderModel,
+    public ModelAndView saveOrder(Model orderModel, @ModelAttribute ("order")
     @Valid Order order, BindingResult result) {
     	String message = new String();
     	if(result.hasErrors()){
-    		List<ObjectError> errors = result.getAllErrors();
-    		for (ObjectError objectError : errors) {
-    			message = message + ":" + objectError.toString();
-    			 return new ModelAndView("acknowledge", "message", message);
-			}
+    		
+    		return new ModelAndView("order", "message", message);
     	}else{
     		message = "Pizza order with below details successfully accepted:\n" + order;
     	}
@@ -38,6 +35,6 @@ public class OrderController {
     @RequestMapping("/order")
     public ModelAndView acceptOrder() {
          
-        return new ModelAndView("order", "command", new Order());
+        return new ModelAndView("order", "order", new Order());
     }
 }

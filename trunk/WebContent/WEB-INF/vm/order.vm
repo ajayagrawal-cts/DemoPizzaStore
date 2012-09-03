@@ -6,28 +6,49 @@
 <body>
 <h2>Welcome to Pizza Store</h2>
 <form method="post" action="saveOrder.html">
+
+        
     <table>
     <tr>
-
- 
- 
         <td><label>Name</label></td>
-        <td><input type="text" id="name" name="name" size="50"/></td>
+        <td><input type="text" id="name" name="name" size="50" value="$!order.name"/>
+        #springBind("order.name")
+        #if ($status && $status.errors.hasErrors())
+        <div id="globalErrors" class="errors">
+                #foreach($error in $status.errorMessages)
+                    $error <br> #end
+            </div>
+        #end</td>
     </tr>
     <tr>
  
         <td><label>Address</label></td>
-        <td><input type="text" name="address" length="150"/></td>
+        <td><input type="text" name="address" length="150" value="$!order.address"/>
+        #springBind("order.address")
+        #if ($status && $status.errors.hasErrors())
+        <div id="globalErrors" class="errors">
+                #foreach($error in $status.errorMessages)
+                    $error <br> #end
+            </div>
+        #end</td>
     </tr>
     <tr>
  
         <td><label>No. of Pizzas</label></td>
-        <td><input type="text" name="noOfPizzas"/></td>
+        <td><input type="text" name="noOfPizzas" value="$!order.noOfPizzas"/>
+        #springBind("order.noOfPizzas")
+        #if ($status && $status.errors.hasErrors())
+        <div id="globalErrors" class="errors">
+                #foreach($error in $status.errorMessages)
+                    $error <br> #end
+            </div>
+        #end</td>
     </tr>
     <tr>
         <td colspan="2">
             <input type="submit" value="Place Order"/>
         </td>
+    </tr>
     </tr>
 </table> 
      
