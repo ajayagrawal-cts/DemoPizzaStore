@@ -1,0 +1,1 @@
+<jsp:forward page="order.html"></jsp:forward>

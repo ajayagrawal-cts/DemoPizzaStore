@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <title>O2 Pizza Store</title>
+</head>
+<body>
+<h2>Welcome to Pizza Store</h2>
+<form method="post" action="saveOrder.html">
+    <table>
+    <tr>
+
+ 
+ 
+        <td><label>Name</label></td>
+        <td><input type="text" id="name" name="name" size="50"/></td>
+    </tr>
+    <tr>
+ 
+        <td><label>Address</label></td>
+        <td><input type="text" name="address" length="150"/></td>
+    </tr>
+    <tr>
+ 
+        <td><label>No. of Pizzas</label></td>
+        <td><input type="text" name="noOfPizzas"/></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Place Order"/>
+        </td>
+    </tr>
+</table> 
+     
+</form>
+</body>
+</html>
