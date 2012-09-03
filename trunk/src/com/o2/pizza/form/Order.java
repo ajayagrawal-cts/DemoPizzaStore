@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 /**
  * @author ctsinpun
@@ -22,6 +24,7 @@ public class Order {
 	private String address;
 
 	@NotNull(message = "*")
+	@NumberFormat(style=Style.NUMBER, pattern="##")
 	private Integer noOfPizzas;
 
 	/**

@@ -25,7 +25,7 @@
     <tr>
  
         <td><label>No. of Pizzas</label></td>
-        <td><input type="text" name="noOfPizzas" value="$!order.noOfPizzas"/>
+        <td><input type="number" name="noOfPizzas" value="$!order.noOfPizzas"/>
         #springBind("order.noOfPizzas")
         #showErrors</td> 
     </tr>
